@@ -1,0 +1,292 @@
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-Regular.woff2') format('woff2'),
+  url('fonts/MyriadPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeue-Light.woff2') format('woff2'),
+  url('fonts/HelveticaNeue-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-Light.woff2') format('woff2'),
+  url('fonts/MyriadPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeue-UltraLight.woff2') format('woff2'),
+  url('fonts/HelveticaNeue-UltraLight.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: unset;
+  font-family: "Myriad Pro";
+  font-weight: normal;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background: transparent;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+header h2 {
+  margin: unset;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+header h2 span {
+  font-weight: 300;
+}
+
+.social {
+  display: flex;
+}
+
+.social a {
+  display: block;
+  position: relative;
+  margin-right: 1rem;
+}
+
+.hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.social a:last-child {
+  margin-right: unset;
+}
+
+.social a:hover img {
+  opacity: 0;
+}
+
+.social a:hover .hover {
+  opacity: 1 !important;
+}
+
+.social a img {
+  height: 1.5rem;
+  width: 2.125rem;
+  object-fit: contain;
+}
+
+.title {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.title img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  object-position: 50% 40%;
+}
+
+.title h1 {
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  text-align: center;
+  margin: 0;
+  font-size: 6rem;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.title h1 span {
+  font-weight: 300;
+}
+
+.title h1 i {
+  font-family: "Myriad Pro";
+  font-weight: 300;
+}
+
+.gray-bg {
+  background: gray;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.info {
+  position: relative;
+}
+
+.info-content {
+  position: absolute;
+  font-size: 18px;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.info h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.info ol {
+  margin-bottom: 0;
+  padding-left: 16px;
+}
+
+.info ol li {
+  margin-bottom: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  width: 100%;
+  height: 100vh;
+}
+
+.column-container, .pay-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.75rem;
+  margin: 0 0 2rem;
+}
+
+.column:first-child p {
+  font-size: 1.25rem;
+}
+
+.column p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.column div {
+  margin-bottom: 1rem;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.pay-buttons {
+  margin-top: 4rem;
+  padding: 0 2rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: black;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+footer h2 {
+    color: white;
+    margin: unset;
+    font-family: "Helvetica Neue";
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+footer h2 span {
+    font-weight: 300;
+}
+
+footer div {
+    display: flex;
+}
+
+footer div img {
+    height: 4rem;
+}
+
+@media (max-width: 1366px) {
+  .wrapper {
+    width: 80%;
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 80%;
+  }
+
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 414px) {
+  .column-container, .pay-buttons {
+    flex-direction: column;
+  }
+}
